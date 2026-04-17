@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 17</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 17</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="adicionarelistar()">
+            Exibir itens
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function adicionarelistar()
+{
+    let itens = []
+    let opcao
+
+    do {
+        opcao = prompt(
+            '=== MENU ===\n' +
+            '1 - ADICIONAR ITEM\n' +
+            '2 - LISTAR ITENS\n' +
+            '0 - SAIR\n\n' +
+            'ESCOLHA UMA OPÇÃO:'
+        );
+
+        switch(opcao)
+        {
+            case '1':
+                let item = prompt('DIGITE O NOME DO ITEM:')
+                itens.push(item)
+                alert('ITEM ADICIONADO!')
+                break
+
+            case '2':
+                if (itens.length === 0)
+                {
+                    alert('NENHUM ITEM CADASTRADO.')
+                }
+                else
+                {
+                    let lista = 'LISTA DE ITENS:\n'
+
+                    for (let i = 0; i < itens.length; i++)
+                    {
+                        lista += (i + 1) + ' - ' + itens[i] + '\n'
+                    }
+
+                    alert(lista)
+                }
+                break
+
+            case '0':
+                alert('SAINDO...')
+                break
+
+            default:
+                alert('OPÇÃO INVÁLIDA!')
+        }
+
+    } while (opcao !== '0')
+}
+</script>
+
+</body>
+</html>

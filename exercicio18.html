@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 18</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 18</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="exibirDados()">
+            Exibir dados
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function exibirDados()
+{
+    let dados = [
+        {nome: "ADRIANO", idade: 54},
+        {nome: "ADRIANA", idade: 50},
+        {nome: "CAMILA", idade: 45},
+        {nome: "PAULA", idade: 60},
+        {nome: "CARMEM", idade: 35},
+        {nome: "VANESSA", idade: 45},
+        {nome: "KARINA", idade: 18}
+    ];
+
+    console.table(dados);
+}
+</script>
+
+</body>
+</html>

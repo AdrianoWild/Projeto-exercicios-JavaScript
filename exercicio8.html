@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 8</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 8</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="exibiranimais()">
+            Exibir animais
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function exibiranimais()
+{
+    let animais = ['CACHORRO','GATO','RATO','CROCODILO','GOLFINHO','TUBARÃO']
+
+    for (let i = 0; i < animais.length; i++)
+    {
+        alert('O ' + (i + 1) + 'º ANIMAL É O ' + animais[i] + '.')
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 12</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 12</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="exibirnome()">
+            Exibir nomes
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function exibirnome() 
+{
+    let nomes = ['JOÃO','SANDRO','TELMA','REGINA','TÚLIO']
+    let resultado = ""
+
+    for (let i = 0; i < nomes.length; i++) 
+    {
+        resultado += i + " - " + nomes[i] + "\n"
+    }
+
+    alert(resultado)
+}
+</script>
+
+</body>
+</html>

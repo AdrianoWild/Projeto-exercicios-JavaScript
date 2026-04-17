@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 13</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 13</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="maioresidade()">
+            Exibir os maiores de idade
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function maioresidade() 
+{
+    let idades = [10,66,55,12,89,103,75,45,88,33,11,56]
+    let maiores = []
+
+    for (let i = 0; i < idades.length; i++) 
+    {
+        if (idades[i] >= 18) 
+        {
+            maiores.push(idades[i])
+        }
+    }
+
+    alert("Maiores de idade: " + maiores.join(", "))
+}
+</script>
+
+</body>
+</html>

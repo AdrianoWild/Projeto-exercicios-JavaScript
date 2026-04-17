@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 14</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 14</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="classificarcargos()">
+            Classificar cargo
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function classificarcargos()
+{
+    let opcao = prompt(
+        'MENU DE OPÇÕES:\n' +
+        'A - ADMIN\n' +
+        'U - USUÁRIO\n\n' +
+        'DIGITE UMA LETRA:'
+    )
+    
+    opcao = opcao.toUpperCase()
+
+    switch(opcao)
+    {
+        case 'A':
+            alert('VOCÊ CLASSIFICOU COMO CARGO DE ADMINISTRADOR.')
+            break
+
+        case 'U':
+            alert('VOCÊ CLASSIFICOU COMO CARGO DE USUÁRIO.')
+            break
+
+        default:
+            alert('CARGO INVÁLIDO.')
+    }
+}
+</script>
+
+</body>
+</html>

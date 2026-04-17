@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 20</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 20</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Sistema escolar</h2>
+
+        <div class="button-group">
+
+            <button onclick="cadastrarAlunos()">
+                Cadastrar alunos
+            </button>
+
+            <button onclick="listarAlunos()">
+                Listar alunos
+            </button>
+
+            <button onclick="calcularMediaESituacao()">
+                Média e Situação
+            </button>
+
+        </div>
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+let alunos = []
+
+function cadastrarAlunos() 
+{
+    let resposta = 'SIM'
+    let posicao = 1
+
+    while (resposta === 'SIM') 
+    {
+        let nome = prompt('DIGITE O NOME DO ' + posicao + 'º ALUNO:')
+        let nota = parseFloat(prompt('DIGITE A NOTA DO ALUNO:'))
+
+        alunos.push({
+            nome: nome,
+            nota: nota
+        })
+
+        posicao++
+
+        resposta = prompt('VOCÊ DESEJA CADASTRAR OUTRO ALUNO? SIM OU NÃO?')
+
+        if (!resposta) break
+
+        resposta = resposta.trim().toUpperCase()
+    }
+
+    console.log("Cadastro finalizado:", alunos)
+}
+
+function listarAlunos() 
+{
+    if (alunos.length === 0) 
+    {
+        alert("Nenhum aluno cadastrado.")
+        return
+    }
+
+    let lista = "LISTA DE ALUNOS:\n"
+
+    for (let i = 0; i < alunos.length; i++) 
+    {
+        lista += (i + 1) + " - " + alunos[i].nome + " | Nota: " + alunos[i].nota + "\n"
+    }
+
+    alert(lista)
+}
+
+function calcularMediaESituacao() 
+{
+    if (alunos.length === 0) 
+    {
+        alert("Nenhum aluno cadastrado.")
+        return
+    }
+
+    let soma = 0
+
+    for (let i = 0; i < alunos.length; i++) 
+    {
+        soma += alunos[i].nota
+    }
+
+    let media = soma / alunos.length
+
+    let situacao = ""
+
+    switch (true) 
+    {
+        case media >= 7:
+            situacao = "Aprovado"
+            break
+
+        case media >= 5:
+            situacao = "Recuperação"
+            break
+
+        default:
+            situacao = "Reprovado"
+            break
+    }
+
+    alert(
+        "Média da turma: " + media.toFixed(2) +
+        "\nSituação: " + situacao
+    )
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 10</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 10</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="exibirmedia()">
+            Calcular a média
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function exibirmedia()
+{
+    let notas = [7.5,10.5,3.4]
+    let somanotas = 0
+
+    for (let i = 0; i < notas.length; i++)
+    {
+        somanotas += notas[i]
+    }
+
+    let medianotas = somanotas / 3
+
+    alert('A MÉDIA DAS NOTAS DO ALUNO FOI ' + medianotas.toFixed(2) + '.')
+}
+</script>
+
+</body>
+</html>

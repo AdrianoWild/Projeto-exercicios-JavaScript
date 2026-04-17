@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 7</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 7</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="cadastrar()">
+            Cadastrar produtos
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function cadastrar()
+{
+    let produtos = []
+
+    for (let i = 0; i < 3; i++)
+    {
+        let produto = prompt('DIGITE O NOME DO ' + (i + 1) + 'º PRODUTO:')
+        produtos.push(produto)
+    }
+
+    alert('OS NOMES DOS PRODUTOS CADASTRADOS SÃO: ' + produtos)
+}
+</script>
+
+</body>
+</html>

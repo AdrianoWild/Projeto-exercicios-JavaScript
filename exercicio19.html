@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 19</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 19</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="buscarNomes()">
+            Buscar o nome
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function buscarNomes() 
+{
+    let nomes = ['ANA', 'BRUNO', 'CARLOS', 'DANIELA', 'EDUARDO']
+
+    let busca = prompt('QUAL NOME VOCÊ DESEJA BUSCAR?').toUpperCase()
+
+    let encontrado = false
+
+    for (let i = 0; i < nomes.length; i++) 
+    {
+        if (nomes[i] === busca) 
+        {
+            encontrado = true
+            break
+        }
+    }
+
+    if (encontrado) 
+    {
+        alert('VOCÊ ENCONTROU O NOME.')
+    } 
+    else 
+    {
+        alert('VOCÊ NÃO ENCONTROU O NOME.')
+    }
+}
+</script>
+
+</body>
+</html>

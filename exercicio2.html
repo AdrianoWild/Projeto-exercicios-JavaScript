@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 2</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 2</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="exibirIdades()">Exibir idades</button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function exibirIdades()
+{
+    let idades = [10,20,30,40,50]
+    for(let i = 0; i < 5; i++)
+    {
+        alert('A ' + (i + 1) + 'ª IDADE É ' + idades[i] + ' ANOS.')
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 6</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 6</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="optar()">
+            Escolher opção
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function optar()
+{
+    let opcao = Number(prompt(
+        'MENU DE OPÇÕES:\n' +
+        '1 - CADASTRAR\n' +
+        '2 - LISTAR\n' +
+        '3 - SAIR\n\n' +
+        'DIGITE UM NÚMERO:'
+    ))
+
+    switch(opcao)
+    {
+        case 1:
+            alert('VOCÊ ESCOLHEU CADASTRAR.')
+            break
+
+        case 2:
+            alert('VOCÊ ESCOLHEU LISTAR.')
+            break
+
+        case 3:
+            alert('VOCÊ ESCOLHEU SAIR.')
+            break
+
+        default:
+            alert('OPÇÃO INVÁLIDA.')
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 5</title>
+<link rel="stylesheet" href="estilopadrao.css">
+</head>
+
+<body>
+
+<h1>Exercício 5</h1>
+
+<div class="center-container">
+    <div class="message-card">
+        <h2>Mensagem do sistema</h2>
+
+        <button onclick="classificarnota()">
+            Classificar a situação do aluno
+        </button>
+
+        <br><br>
+
+        <a href="index.html">Voltar à tela anterior</a>
+    </div>
+</div>
+
+<script>
+function classificarnota()
+{
+    let nota = prompt('DIGITE UMA NOTA:')
+
+    if (nota >= 7)
+    {
+        alert('O ALUNO FOI APROVADO.')
+    }
+    else
+    {
+        alert('O ALUNO FOI REPROVADO.')
+    }
+}
+</script>
+
+</body>
+</html>
